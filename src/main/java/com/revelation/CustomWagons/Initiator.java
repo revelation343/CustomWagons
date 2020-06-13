@@ -35,7 +35,7 @@ public class Initiator implements WurmServerMod, ItemTemplatesCreatedListener, C
     public static int canvaslessWagonID = 6001;
 
     public String getVersion() {
-        return "v1.0";
+        return "v1.1";
     }
 
     public void configure(Properties properties) {

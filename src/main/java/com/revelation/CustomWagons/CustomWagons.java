@@ -10,8 +10,11 @@ public class CustomWagons implements WurmServerMod, ItemTypes{
     public CustomWagons() {
         Initiator.logInfo("Creating Custom Wagons");
         try {
-            ItemTemplateCreator.createItemTemplate(Initiator.wagonerItemID, 3, "Wagoner wagon", "Wagoner wagons", "almost full", "somewhat occupied", "half-full", "emptyish", "A fairly large wagon designed to be dragged by four animals.", new short[]{108, 1, 31, 21, 51, 52, 44, 117, 193, 134, 47, 48, 176, 180, 160, 54}, (short) 60, (short) 41, 0, 9072000L, 550, 300, 410, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.transports.medium.wagon.wagoner.unloaded.", 70.0F, 240000, (byte) 14, 50000, true, 0);
-            ItemTemplateCreator.createItemTemplate(Initiator.canvaslessWagonID, 3, "Canvasless wagon", "Canvasless wagons", "almost full", "somewhat occupied", "half-full", "emptyish", "A fairly large wagon designed to be dragged by four animals.", new short[]{108, 1, 31, 21, 51, 52, 44, 117, 193, 134, 47, 48, 176, 180, 160, 54}, (short) 60, (short) 41, 0, 9072000L, 550, 300, 410, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.transports.medium.wagon.canvasless.", 70.0F, 240000, (byte) 14, 50000, true, 0);
+            ItemTemplateCreator.createItemTemplate(Initiator.wagonerItemID, 3, "Wagoner wagon", "Wagoner wagons", "almost full", "somewhat occupied", "half-full", "emptyish", "A fairly large wagon designed to be dragged by four animals.", new short[]{108, 1, 31, 21, 51, 52, 44, 117, 193, 134, 47, 48, 176, 180, 160, 54}, (short) 60, (short) 41, 0, 9072000L, 550, 300, 410, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.transports.medium.wagon.wagoner.unloaded.", 70.0F, 240000, (byte) 14, 50000, true, 0).setContainerSize(200, 260, 400);;
+            ItemTemplateCreator.createItemTemplate(Initiator.canvaslessWagonID, 3, "Canvasless wagon", "Canvasless wagons", "almost full", "somewhat occupied", "half-full", "emptyish", "A fairly large wagon designed to be dragged by four animals.", new short[]{108, 1, 31, 21, 51, 52, 44, 117, 193, 134, 47, 48, 176, 180, 160, 54}, (short) 60, (short) 41, 0, 9072000L, 550, 300, 410, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.transports.medium.wagon.canvasless.", 70.0F, 240000, (byte) 14, 50000, true, 0).setContainerSize(200, 260, 400);;
+
+
+
         } catch (IOException var2) {
             var2.printStackTrace();
         }
