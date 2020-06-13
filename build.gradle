@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+
+group 'CustomWagons'
+version '1.0'
+
+repositories {
+    mavenCentral()
+    maven { url "https://jcenter.bintray.com" }
+    maven { url "https://gotti.no-ip.org/maven/repository" }
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    compile 'org.gotti.wurmunlimited:server-modlauncher:0.43'
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+jar {
+    archiveName "${project.name}.jar"
+}
+
+task dist(type: Zip) {
+    into("mods", {
+        into(project.name, {
+            from jar
+            from fileTree(dir: 'CustomWagonsPack', include: '*')
+        })
+        from fileTree(dir: 'mods', include: '*')
+    })
+
+    archiveName "${project.name}-${project.version}.zip"
+}
